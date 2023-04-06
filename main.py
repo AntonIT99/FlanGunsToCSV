@@ -51,6 +51,8 @@ def read_gun_file(path, file) -> Gun:
             gun.damage = read_int(value)
         elif parameter == "ShootDelay":
             gun.shoot_delay = read_int(value)
+        elif parameter == "RoundsPerMin":
+            gun.shoot_delay = int(round(1200 / read_int(value)))
     return gun
 
 
